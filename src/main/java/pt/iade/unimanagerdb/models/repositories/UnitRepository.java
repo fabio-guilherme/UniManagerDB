@@ -5,11 +5,11 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 
 import pt.iade.unimanagerdb.models.Unit;
-import pt.iade.unimanagerdb.models.views.UnitPlanView;
+////import pt.iade.unimanagerdb.models.views.UnitPlanView;
 
 public interface UnitRepository extends CrudRepository<Unit, Integer> {
     // Queries de filtragem
-
+/* 
     // Custom queries
     String QueryFindUnitPlans = "SELECT u.cla_id AS id, u.cla_name AS name, " +
             "u.cla_credits AS credits, " +
@@ -26,5 +26,5 @@ public interface UnitRepository extends CrudRepository<Unit, Integer> {
                    " Where u.cla_id=:id", nativeQuery = true) 
             Iterable<UnitPlanView> findUnitPlansById(
                                         @Param("id") int id);
-
+*/
 }
