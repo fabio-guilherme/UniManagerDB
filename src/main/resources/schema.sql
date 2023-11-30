@@ -16,7 +16,7 @@ CREATE TABLE unimanager.classes (
   cla_id INTEGER AUTO_INCREMENT PRIMARY KEY,
   cla_name VARCHAR(40) NOT NULL,
   cla_credits INTEGER NOT NULL,
-  cla_dep_id INTEGER NOT NULL
+  cla_dep_id INTEGER -- NOT NULL
 );
 
 -- Create the `courses` table.
@@ -67,8 +67,8 @@ ALTER TABLE unimanager.studyplans
 ADD CONSTRAINT fk_studyplans_courses FOREIGN KEY (plan_cour_id) REFERENCES unimanager.courses (cour_id);
 
 -- Add a foreign key constraint to the `studyplans` table to reference the `classes` table.
-ALTER TABLE unimanager.studyplans
-ADD CONSTRAINT fk_studyplans_classes FOREIGN KEY (plan_cla_id) REFERENCES unimanager.classes (cla_id);
+/*ALTER TABLE unimanager.studyplans
+ADD CONSTRAINT fk_studyplans_classes FOREIGN KEY (plan_cla_id) REFERENCES unimanager.classes (cla_id);*/
 
 -- Add a foreign key constraint to the `enrollment` table to reference the `students` table.
 ALTER TABLE unimanager.enrollment
